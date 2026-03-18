@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable data type</title>
+</head>
+<body>
+    <script>
+        //JS variable data type
+        //primitive - string , number, boolean , null, undefined , symb
+        // string
+        var name="ABES";
+        console.log(name);
+        console.log(typeof(name));
+
+        //number
+        let myCont= 986528652;
+        console.log(myCont);
+        console.log(typeof(myCont));
+
+        //boolean
+        let courseDone= false;
+        console.log(courseDone);
+        console.log(typeof(courseDone));
+
+        //null
+        let add= null;
+        console.log(add);
+        console.log(typeof(add));
+
+        //undefined
+        let email;
+        console.log(email);
+        console.log(typeof(email));
+
+        //Bigint
+        let bigAmount= BigInt(1466447844656444);
+        console.log(bigAmount);
+        console.log(typeof(bigAmount));
+
+        //symbol - A unique primitive identifier
+        let val1= Symbol("Hello");
+        let val2= Symbol("Hello");
+        console.log(val1=val2);
+        console.log(typeof(val1));
+
+        //Rference or non-primitive - defined in pair i.e. key and value
+        //object {}, function () , array []
+        let myInfo={
+            name:"Anand",
+            mobileNo: 544646464445,
+            emial: "anandch@ymail.com",
+            address: null
+        }
+        //access object's keys
+        console.log(myInfo);
+        console.log(myInfo.email);
+
+        function hello(){
+            let myName= "ABES EC";
+            console.log();
+            console.log(typeof(hello));
+      }
+      
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>
