@@ -6,6 +6,53 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // conditional statement:used to perform different actions based on different conditions, controlling the flow of a program
+
+        // if.....
+        let age=16;
+
+        if(age<18){
+            // console.log("not valid age for vote casting");
+        }
+        // console.log("valid age for vote casting!");
+
+        // if -----------else
+        let myAge=12;
+        if(myAge>=18){
+            console.log("valid age for vote casting!");
+        }
+        else{
+            console.log("Not valid age!");
+        }
+        //switch ---case
+        let grade='C ';
+        switch(grade){
+            case 'A':result="First Division";
+            break;
+            case 'B':result="Second Division";
+            break;
+            case 'C':result="Third Division";
+            break;
+            default :result="Fail";
+        }
+        console.log(result);
+        //if...elseif...else..............
+
+        let marks=29;
+        if(marks>=60){
+            console.log("First Division Marks");
+        }
+        else if(marks<60 && marks>=40){
+           console.log("Second Divison Marks");
+        }
+        else if(marks<40 && marks>30){
+            console.log("Third Divison Marks");
+        }
+        else{
+            console.log("Fail");
+        }
+
+    </script>
 </body>
 </html>
