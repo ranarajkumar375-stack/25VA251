@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        //design to perform a specific task
+        //function
+        function demo(){
+            console.log("Hello JS");
+        }
+        demo(); // function calling
+
+        //with parameters
+        demo("Rect");
+            //with default parameters 
+            function cal(a,b){
+                console.log("addition of two numbers is " + (a+b));
+            }
+            cal(4,5);
+
+
+            //anonymous function - a function definition without a specific name,
+            //  created on-the-fly for short-term tasks, callbacks, or one-time use
+
+            let msg=function(){
+                console.log("HEllo Advance JS");
+            }
+            msg();
+            //shore code for above function i.e. , arrow function
+            let msg1=()=>console.log("Hello function as an arrow");
+            msg1();
+
+            let add=(a,b)=>{
+                console.log("first number is " + a);
+                console.log("Second number is "+ b);
+                console.log("addition of two number is " + (a+b));
+            }
+            add(7,4);
+
+            //IIFE : An immediately Invoked function expression
+            //(IIFE) is a JavaScript function that run as soon as it is defined.
+            (function(){
+                console.log("IIFE in JS");
+            })();
+            //IIFE using arrow 
+            (()=>console.log("IIFE using an arrow"))();
+
+            //callback function :-  function passed as an argument into another function, intended to be executed ("called back") later—either immediately (synchronous) 
+            // or after an asynchronous operation completes.
+
+            function mul(callback){
+                var num1 =10;
+                console.log("First value is " + num1);
+                var num2 =20;
+                console.log("Second value is " + num2);
+                var res=num1*num2;
+                callback(res);
+            }
+            function result (res){
+                console.log("Multipication is " + res);
+            }
+            mul (result);
+
+            //callback function using SetTimeout API
+
+            function msg2(){
+                document.writeln("Hello");
+               // console.log("Hello Call Back");
+
+            }
+            function loading(){
+                document.writeln("loading.....")
+            };
+            setTimeout(msg2,2000);
+            loading();
+
+            //map filter and reduce
+
+            let num=[3,4,5,6,7];
+            let finalResult=num.map(n=>n*2);
+            console.log(finalResult);
+
+            //Filter method:- 
+
+           //let finalResult1=num.filter((total,n)=>total+n);
+           //console.log(finalResult1);
+
+            let finalResult2=num.reduce((total,n)=>total+n);
+            console.log(finalResult2);
+
+            //Promises.....
+
+
+           // let promise=new Promise(function(resolve, reject){
+           //     resolve ("Valid age");
+            //}
+           
+
+
+
+            //async await.......
+
+         async function userData(){
+            try{
+             let data=await fetch('https://dummyjson.com/products/1');
+             let updateData=await data.json();
+             console.log(updateData);
+            }
+            catch(error) {
+                console.log("Not Fetched" + error);
+            }
+         }
+         userData();
+         //Local Storage-.......
+         let userInfo={
+            name:"Nick",
+            age:21,
+            mob:56984844,
+            eMail:"nick@785"
+         }
+         localStorage.setItem('preferences',JSON.stringify(userInfo));
+
+         let storagePrefernces=JSON.parse(localStorage.getItem('preferences'));
+         console.log(storagePrefernces.name);
+
+    </script>
+</body>
+</html>
