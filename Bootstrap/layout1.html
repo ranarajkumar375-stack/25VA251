@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Layout</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        div {
+            border: 2px solid #333;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .header { background-color: #ff6b6b; }
+        .nav { background-color: #4ecdc4; }
+        .section { background-color: #1a535c; }
+        .article { background-color: #ff9f1c; }
+        .aside { background-color: #6a4c93; height: 100%; }
+        .footer { background-color: #2ec4b6; }
+    </style>
+</head>
+<body>
+
+<div class="container mt-3">
+
+    <!-- Header -->
+    <div class="row mb-2">
+        <div class="col-12 header">header</div>
+    </div>
+
+    <!-- Nav -->
+    <div class="row mb-2">
+        <div class="col-12 nav">nav</div>
+    </div>
+
+    <!-- Section + Aside -->
+    <div class="row mb-2">
+        <div class="col-md-8">
+            <div class="section mb-2">section</div>
+            <div class="article">article</div>
+        </div>
+        <div class="col-md-4 d-flex">
+            <div class="aside w-100">aside</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="row">
+        <div class="col-12 footer">footer</div>
+    </div>
+
+</div>
+
+</body>
+</html>
